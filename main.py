@@ -6,10 +6,15 @@ import config
 from PIL import Image, ImageFilter
 import requests, io, os
 from dotenv import load_dotenv
+import os
+
 
 # ==============================
 # LOAD TOKEN
 # ==============================
+TOKEN = os.getenv("TOKEN")
+bot.run(TOKEN)
+
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 if not TOKEN:
